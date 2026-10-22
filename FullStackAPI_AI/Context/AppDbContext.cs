@@ -11,6 +11,11 @@ namespace FullStackAPI_AI.Context
         }
 
         public DbSet<User> Users { get; set; }
+        public DbSet<Address> Addresses { get; set; }
+        public DbSet<CompanyProfile> CompanyProfiles { get; set; }
+        public DbSet<PersonProfile> PersonProfiles { get; set; }
+        public DbSet<Title> Titles { get; set; }
+        public DbSet<UserTitle> UserTitles { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

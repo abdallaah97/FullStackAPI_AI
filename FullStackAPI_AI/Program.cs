@@ -9,7 +9,7 @@ builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 
 builder.Services.AddDbContext<AppDbContext>(options => 
-    options.UseSqlServer("Server=THINKPADULTRA51\\SQLEXPRESS;Database=FullStackAPI_AI;User Id=sa;Password=abc@123;TrustServerCertificate=True"));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("FullStackAPI_AI")));
 
 var app = builder.Build();
 
